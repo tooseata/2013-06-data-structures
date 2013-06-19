@@ -22,7 +22,7 @@ describe("stack", function() {
   });
 
   it('should add pushed items to the top of the stack', function() {
-    // Fill out the body of the test here
+    
   });
 
   it('should remove popped items from the top of the stack', function() {
