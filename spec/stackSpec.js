@@ -22,18 +22,31 @@ describe("stack", function() {
   });
 
   it('should add pushed items to the top of the stack', function() {
-    
+    stack.push('bob');
+    expect(stack.pop()).to.eql('bob');
   });
 
   it('should remove popped items from the top of the stack', function() {
+    stack.push('bob');
+    stack.push('mary');
+    stack.push('joe');
+    expect(stack.pop()).to.eql('joe');
     // Fill out the body of the test here
   });
 
   it('should push and pop multiple items in the right order (LIFO)', function() {
+    stack.push('bob');
+    stack.push('mary');
+    stack.push('joe');
+    expect(stack.pop()).to.eql('joe');
+    expect(stack.pop()).to.eql('mary');
+
     // Fill out the body of the test here
   });
 
   it('should not error when popping from an empty stack', function() {
+    expect(stack.pop()).to.eql();
+
     // Fill out the body of the test here
   });
 
