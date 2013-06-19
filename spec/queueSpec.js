@@ -21,5 +21,24 @@ describe("queue", function() {
     expect(queue.size).to.be.a('function');
   });
 
+
+  it('Add a value to the back of the queue', function() {
+    queue.enqueue('bob');
+    queue.enqueue('mary');
+    expect(queue.dequeue()).to.eql('bob');
+  });
+
+  it('Remove and return the string at the front of the queue', function() {
+    queue.enqueue('joe');
+    queue.enqueue('john');
+    expect(queue.dequeue()).to.eql('joe');
+  });
+
+  it('Return the number of items in the queue', function() {
+    queue.enqueue('joe');
+    queue.enqueue('john');
+    expect(queue.size()).to.eql(2);
+  });
+
   // Hey! Add tests here that thoroughly test the functionality of your queue
 });
