@@ -7,7 +7,6 @@ var Queue = function() {
   queue.length = 0;
   queue.storage = {}; 
   return queue;
-
 };
 
 var queueMethods = Queue.prototype;
