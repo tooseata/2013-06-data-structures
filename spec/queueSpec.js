@@ -12,6 +12,7 @@ describe("queue", function() {
       queue = new Queue();
     }
   });
+  
   /* END DO NOT MODIFY */
 
   // Any queue implementation should have the following methods
