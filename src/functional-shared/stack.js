@@ -13,7 +13,6 @@ var stackMethods = {
     return this.length;
   }
 };
-
 var makeStack = function(){
   // Use an object with numeric keys to store values
   var stack = {};
