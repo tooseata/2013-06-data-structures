@@ -15,7 +15,7 @@
   stack.pop = function(){
     var tmp = storage[size];
     delete storage[size];
-    size--; 
+    size--;
     return tmp;
   };
 

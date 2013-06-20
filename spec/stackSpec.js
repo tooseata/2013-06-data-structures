@@ -5,7 +5,9 @@ describe("stack", function() {
   beforeEach(function() {
     // Before each test runs, create a new Stack
     if (runner.is('src/functional') || runner.is('src/functional-shared')) {
+//debugger;
       stack = makeStack();
+      //var stack2 = makeStack();
     } else if (runner.is('src/prototypal')) {
       stack = Stack();
     } else if (runner.is('src/pseudoclassical')) {
