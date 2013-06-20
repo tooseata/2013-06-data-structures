@@ -1,35 +1,28 @@
+var queueMethods = {
+  enqueue: function (value){
+    this.storage[this.last] = value;
+    this.last++;
+    this.length++;
+  },
+  dequeue:  function(){
+    var temp = this.storage[this.first];
+    this.first++;
+    this.length -= 1;
+    return temp;
+  },
+  size: function(){
+    return this.length;
+  }
+};
+
 var makeQueue = function(){
   // Use an object with numeric keys to store values
-  var storage = {};
-
-  // Implement the methods below
-  var queue = {};
-  var first  = 0;
-  var last = 0;
-  var size = 0;
-
-  queue.enqueue = function(value){
-    storage[last] = value;
-    last++;
-    size++;
+  var queue = {
+    first : 0,
+    last : 0,
+    length : 0,
+    storage : {}
   };
-
-  queue.dequeue = function(){
-    var temp = storage[first];
-    // erase the value
-
-    // do something to first
-    first++;
-
-    // we need to remove the element in storage with the greatest size
-    // how do we check what the gretest size is
-    size -= 1;
-    return temp;
-  };
-
-  queue.size = function(){
-    return size;
-  };
-
+  _.extend(queue, queueMethods);
   return queue;
 };
